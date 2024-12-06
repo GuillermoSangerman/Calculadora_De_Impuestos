@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Calculadora de impuestos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/main.css">
+  </head>
+  <body class="bodies">
+    <!-- contenedor principal -->
+    <div class="container-fluid px-0 pt-2 bg-white d-md-flex pt-md-0 mt-md-5 container_desktop">
+      <!-- encabezado -->
+      <div class="w-100 px-4 mt-md-1">
+        <div class="header mt-4 mb-3 w-100 d-md-flex justify-content-md-between">
+          <h1 class="text_desktop">Mortgage Calculator</h1>
+          <input id="clear_text" class="d-none" type="text">
+          <label class="text-decoration-underline clear_all" for="clear_text">Clear All</label>
+        </div>
+        <!-- inputs -->
+        <div class="input-group flex-column w-100">
+          <div class="col-auto">
+            <label class="w-100 mb-2" for="mountgage_amount">Mortgage Amount</label>
+            <div class="input-group">
+              <span class="input-group-text" id="number_icon">£</span>
+              <input type="number" id="mountgage_amount" class="form-control w-75" aria-label="number" aria-describedby="number">
+              <div id="mountgage_amount_invalid" class="invalid-feedback mt-2">
+                This field is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="d-md-flex w-100">  
+        <div class="input-group flex-column w-100 ">
+          <div class="col-auto">
+            <label class="w-100 mt-3 mb-2" for="mountgage_term">Mortgage Term</label>
+            <div class="input-group">
+              <input type="number" id="mountgage_term" class="form-control w-75" aria-label="number" aria-describedby="number">
+              <span class="input-group-text" id="number_icon_years">years</span>
+              <div id="mountgage_term_invalid" class="invalid-feedback mt-2">
+                This field is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-group flex-column w-100 ms-md-3">
+          <div class="col-auto">
+            <label class="w-100 mt-3 mb-2" for="interest_rate">Interest Rate</label>
+            <div class="input-group">
+              <input type="number" id="interest_rate" class="form-control w-75" aria-label="number" aria-describedby="number">
+              <span class="input-group-text" id="number_icon_porcentaje">%</span>
+              <div id="interest_rate_invalid" class="invalid-feedback mt-2">
+                This field is required.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- botones -->
+        <div class="mt-3">
+          <div><span class="w-100">Mortgage Type</span></div>
+          <div class="form-check border border-dark rounded-1 ps-2 py-2 mt-2">  
+            <input class="form-check-input border border-dark" type="radio" name="repayment" id="repayment" value="option1">
+            <label class="form-check-label" for="repayment">
+              Repayment
+            </label>
+          </div>
+          <div class="form-check border border-dark rounded-1 ps-2 py-2 mt-2 mb-3">
+            <input class="form-check-input border border-dark" type="radio" name="interest_only" id="interest_only" value="option2">
+            <label class="form-check-label" for="interest_only">
+              Interest Only
+            </label>
+          </div>
+          <div id="repayment_invalid" class="invalid-feedback mb-3">
+            This field is required.
+          </div>
+          <div id="interest_only_invalid" class="invalid-feedback mb-3">
+            This field is required.
+          </div>
+        </div>
+        <!-- boton para calcular -->
+        <div class="w-100 my-md-4">
+          <button class="btn_calculate w-100 rounded-5 border border-none"> <img src="./assets/images/icon-calculator.svg" alt="icono de calculadora"> Calculate Repayments</button>
+        </div>
+      </div>
+      <!-- segundo contenedor donde se mostraran resultados -->
+      <div class="w-100 mt-4 d-flex flex-column justify-content-center align-items-center text-center results_container mt-md-0 px-md-4 d-none">
+        <img class="w-50 mt-4" src="./assets/images/illustration-empty.svg" alt="imagen de calculadora">
+        <h2 class="mt-3 text-white h2_desktop">Results shown here</h2>
+        <p class="mt-3 px-3 mb-5 text-white p_desktop"> Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.</p>
+      </div>
+      <!-- contenedor con los resultados mostrados -->
+      <div class="results_container_cal w-100 mt-4 px-4 pt-2 pb-4 mt-md-0">
+        <h2 class="text-white mt-3">Your results</h2>
+        <p class="text-white mt-3">Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.</p>
+          <div class="result_table border border-5 border-bottom-0 border-end-0 border-start-0 border-warning rounded rounded-4 py-3 px-4 mt-md-4">
+          <div class="">
+            <label  class="text-white" for="results_repayments">Your monthly repayments</label>
+            <input class="border border-0" type="text" name="results_repayments" id="results_repayments"  placeholder="£1,797.74" disabled>
+          </div>
+          <hr class="text-white">
+          <div>
+            <label  class="text-white"  for="results_repay">Total you'll repay over the term</label>
+            <input class="text-white border border-0" type="text" name="results_repay" id="results_repay" placeholder="£539,322.94"  disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.bodies{
+    background-color: #c4dfe6;
+}
+#number_icon{
+    border-color: black;
+    background-color: #c4dfe6;
+    opacity: 70%;
+    font-weight: bold;
+}
+#mountgage_amount{
+    border-color: black;
+    border-left: #c4dfe6;
+    border-radius: 0px 5px 5px 0px;
+}
+#mountgage_term{
+    border-color: black;
+    border-right: #c4dfe6;
+}
+#number_icon_years{
+    border-radius: 0px 5px 5px 0px;
+    border-left: #c4dfe6;
+    border-color: black;
+    background-color: #c4dfe6;
+    opacity: 70%;
+    font-weight: bold;
+}
+#mountgage_amount_invalid,
+#mountgage_term_invalid,
+#interest_rate_invalid{
+    color: hsl(4, 69%, 50%) !important;
+}
+#interest_rate{
+    border-color: black;
+    border-right: #c4dfe6;
+}
+#number_icon_porcentaje{
+    border-radius: 0px 5px 5px 0px;
+    border-left: #c4dfe6;
+    border-color: black;
+    background-color: #c4dfe6;
+    opacity: 70%;
+    font-weight: bold;
+}
+#repayment{
+    margin-inline: 10px !important;
+    background-color: hsla(61, 70%, 52%, 0.178);
+
+}
+#interest_only{
+    margin-inline: 10px !important;
+    background-color: hsla(61, 70%, 52%, 0.411);
+}
+.form-check-label{
+    font-weight: bold;
+}
+.btn_calculate{
+    font-weight: bold;
+    background-color: hsl(61, 70%, 52%);
+    height: 3.1rem !important;
+    
+}
+.results_container{
+    background-color: #003b46;
+    /* background-color: #021c1e; */
+}
+.results_container_cal{
+    background-color: #003b46 !important;
+}
+.result_table{
+    background-color: #021c1e !important;
+    border-color: hsl(61, 70%, 52%) !important;
+}
+#results_repayments{
+    max-width: 250px !important;
+    color: hsl(61, 70%, 52%) !important;
+    font-size: 40px !important;
+    background-color: #021c1e;
+}
+#results_repay{
+    background-color: #021c1e;
+    max-width: 250px !important;
+    color: hsl(61, 70%, 52%) !important;
+    font-size: 25px !important;
+}
+/* acciones de focus o hover */
+#repayment:focus{
+    background-color: hsl(61, 70%, 52%);
+}
+#interest_only:focus{
+    background-color: hsl(61, 70%, 52%);
+}
+.form-check:focus-within{
+    background-color: hsla(61, 70%, 52%, 0.221);
+    border-color: hsl(61, 70%, 52%) !important;
+}
+
+/* color: papayawhip; */
+/* dektop */
+@media (min-width: 768px) {
+    .container_desktop{
+        max-width: 800px;
+        max-height: 500px;
+        border-radius: 1.5rem ;
+    }
+    .results_container{
+        border-radius: 0rem 1.5rem 1.5rem 5rem !important;
+    }
+    .h2_desktop{
+        font-size: 1.5rem;
+    }
+    .p_desktop{
+        font-size: .8rem;
+    }
+    .text_desktop{
+        font-size: 1.3rem;
+    }
+    #mountgage_term{
+        max-width: 60% !important;
+    }
+    #interest_rate{
+        max-width: 90% !important;
+    }
+    .btn_calculate{
+        max-width: 75%;
+    }
+    .results_container_cal{
+        border-radius: 0rem 1.5rem 1.5rem 5rem !important;
+    }
+    .results_container_cal > h2{
+        font-size: 1.5rem;
+    }
+    .results_container_cal > p{
+        font-size: .8rem !important;
+    }
+}
