@@ -8,7 +8,7 @@ const clearAll = document.querySelector('.clear_all')
 
 mountgageAmount.value = 0
 mountgageTerm.value = 0
-interestRate = 0
+interestRate.value = 0
 
 
 function obtenerIntereses(r) {
