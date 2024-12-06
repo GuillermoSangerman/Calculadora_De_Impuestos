@@ -23,21 +23,21 @@
           <div class="col-auto">
             <label class="w-100 mb-2" for="mountgage_amount">Mortgage Amount</label>
             <div class="input-group">
-              <span class="input-group-text" id="number_icon">£</span>
-              <input type="number" id="mountgage_amount" class="form-control w-75" aria-label="number" aria-describedby="number">
+              <span class="input-group-text focus_inputs" id="number_icon">£</span>
+              <input type="number" id="mountgage_amount" class="form-control w-75 focus_content focus-ring" aria-label="number" aria-describedby="number">
               <div id="mountgage_amount_invalid" class="invalid-feedback mt-2">
                 This field is required.
               </div>
             </div>
           </div>
         </div>
-      <div class="d-md-flex w-100">  
+      <div class="d-md-flex w-100">
         <div class="input-group flex-column w-100 ">
           <div class="col-auto">
             <label class="w-100 mt-3 mb-2" for="mountgage_term">Mortgage Term</label>
             <div class="input-group">
-              <input type="number" id="mountgage_term" class="form-control w-75" aria-label="number" aria-describedby="number">
-              <span class="input-group-text" id="number_icon_years">years</span>
+              <input type="number" id="mountgage_term" class="form-control w-75 focus-ring focus_content" aria-label="number" aria-describedby="number">
+              <span class="input-group-text focus_inputs" id="number_icon_years">years</span>
               <div id="mountgage_term_invalid" class="invalid-feedback mt-2">
                 This field is required.
               </div>
@@ -48,8 +48,8 @@
           <div class="col-auto">
             <label class="w-100 mt-3 mb-2" for="interest_rate">Interest Rate</label>
             <div class="input-group">
-              <input type="number" id="interest_rate" class="form-control w-75" aria-label="number" aria-describedby="number">
-              <span class="input-group-text" id="number_icon_porcentaje">%</span>
+              <input type="number" id="interest_rate" class="form-control w-75 focus-ring focus_content" aria-label="number" aria-describedby="number">
+              <span class="input-group-text focus_inputs" id="number_icon_porcentaje">%</span>
               <div id="interest_rate_invalid" class="invalid-feedback mt-2">
                 This field is required.
               </div>
@@ -58,18 +58,18 @@
         </div>
       </div>
         <!-- botones -->
-        <div class="mt-3">
+        <div class="mt-3  grupo">
           <div><span class="w-100">Mortgage Type</span></div>
           <div class="form-check border border-dark rounded-1 ps-2 py-2 mt-2">  
-            <input class="form-check-input border border-dark" type="radio" name="repayment" id="repayment" value="option1">
+            <input class="check_input border border-dark" type="radio" name="filter" id="repayment" value="option1">
             <label class="form-check-label" for="repayment">
-              Repayment
+              Repayment                            
             </label>
           </div>
           <div class="form-check border border-dark rounded-1 ps-2 py-2 mt-2 mb-3">
-            <input class="form-check-input border border-dark" type="radio" name="interest_only" id="interest_only" value="option2">
+            <input class="check_input border border-dark" type="radio" name="filter" id="interest_only" value="option2">
             <label class="form-check-label" for="interest_only">
-              Interest Only
+              Interest Only 
             </label>
           </div>
           <div id="repayment_invalid" class="invalid-feedback mb-3">
@@ -85,14 +85,14 @@
         </div>
       </div>
       <!-- segundo contenedor donde se mostraran resultados -->
-      <div class="w-100 mt-4 d-flex flex-column justify-content-center align-items-center text-center results_container mt-md-0 px-md-4 d-none">
+      <div class="w-100 mt-4 d-flex flex-column justify-content-center align-items-center text-center results_container mt-md-0 px-md-4 ">
         <img class="w-50 mt-4" src="./assets/images/illustration-empty.svg" alt="imagen de calculadora">
         <h2 class="mt-3 text-white h2_desktop">Results shown here</h2>
         <p class="mt-3 px-3 mb-5 text-white p_desktop"> Complete the form and click “calculate repayments” to see what 
           your monthly repayments would be.</p>
       </div>
       <!-- contenedor con los resultados mostrados -->
-      <div class="results_container_cal w-100 mt-4 px-4 pt-2 pb-4 mt-md-0">
+      <div class="results_container_cal w-100 mt-4 px-4 pt-2 pb-4 mt-md-0 d-none">
         <h2 class="text-white mt-3">Your results</h2>
         <p class="text-white mt-3">Your results are shown below based on the information you provided. 
           To adjust the results, edit the form and click “calculate repayments” again.</p>
@@ -107,7 +107,7 @@
             <input class="text-white border border-0" type="text" name="results_repay" id="results_repay" placeholder="£539,322.94"  disabled>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

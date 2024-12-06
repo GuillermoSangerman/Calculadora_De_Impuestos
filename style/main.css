@@ -13,11 +13,13 @@
     font-weight: bold;
 }
 #mountgage_amount{
+    cursor: pointer;
     border-color: black;
     border-left: #c4dfe6;
     border-radius: 0px 5px 5px 0px;
 }
 #mountgage_term{
+    cursor: pointer;
     border-color: black;
     border-right: #c4dfe6;
 }
@@ -35,8 +37,12 @@
     color: hsl(4, 69%, 50%) !important;
 }
 #interest_rate{
+    cursor: pointer;
     border-color: black;
     border-right: #c4dfe6;
+}
+.grupo{
+    cursor: pointer;
 }
 #number_icon_porcentaje{
     border-radius: 0px 5px 5px 0px;
@@ -47,13 +53,25 @@
     font-weight: bold;
 }
 #repayment{
+    cursor: pointer;
     margin-inline: 10px !important;
-    background-color: hsla(61, 70%, 52%, 0.178);
-
+    
 }
 #interest_only{
+    cursor: pointer;
     margin-inline: 10px !important;
     background-color: hsla(61, 70%, 52%, 0.411);
+}
+
+input[type="radio"]:checked + label:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid hsl(61, 70%, 52%);
+    float: left;
+    margin-left: -1.7em;
+    margin-top: .3em;
+    border-radius: 100%;
 }
 .form-check-label{
     font-weight: bold;
@@ -88,15 +106,22 @@
     font-size: 25px !important;
 }
 /* acciones de focus o hover */
-#repayment:focus{
-    background-color: hsl(61, 70%, 52%);
-}
-#interest_only:focus{
-    background-color: hsl(61, 70%, 52%);
+.form-check:focus,
+.form-check:hover {
+    border-color: hsl(61, 70%, 52%) !important;
 }
 .form-check:focus-within{
-    background-color: hsla(61, 70%, 52%, 0.221);
+    background-color: hsla(61, 70%, 52%, 0.221) !important;
     border-color: hsl(61, 70%, 52%) !important;
+}
+.focus_inputs:focus,
+.focus_inputs:hover{
+    background-color: hsl(61, 70%, 52%) !important;
+}
+.focus_content:focus,
+.focus_content:hover{
+    border-color: hsl(61, 70%, 52%) !important;
+    --bs-focus-ring-color: hsl(61, 70%, 52%, 0.324) !important;
 }
 
 /* color: papayawhip; */
