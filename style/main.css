@@ -6,6 +6,9 @@
 .bodies{
     background-color: #c4dfe6;
 }
+.clear_all{
+    cursor: pointer;
+}
 #number_icon{
     border-color: black;
     background-color: #c4dfe6;
@@ -43,6 +46,7 @@
 }
 .grupo{
     cursor: pointer;
+    background-color: white;
 }
 #number_icon_porcentaje{
     border-radius: 0px 5px 5px 0px;
@@ -62,7 +66,16 @@
     margin-inline: 10px !important;
     background-color: hsla(61, 70%, 52%, 0.411);
 }
-
+#repayment input[type="radio"]:checked + label:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid white;
+    float: left;
+    margin-left: -1.7em;
+    margin-top: .3em;
+    border-radius: 100%;
+}
 input[type="radio"]:checked + label:after {
     content: "";
     width: 0;
@@ -73,6 +86,7 @@ input[type="radio"]:checked + label:after {
     margin-top: .3em;
     border-radius: 100%;
 }
+
 .form-check-label{
     font-weight: bold;
 }
