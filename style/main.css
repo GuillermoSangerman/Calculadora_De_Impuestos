@@ -34,11 +34,7 @@
     opacity: 70%;
     font-weight: bold;
 }
-#mountgage_amount_invalid,
-#mountgage_term_invalid,
-#interest_rate_invalid{
-    color: hsl(4, 69%, 50%) !important;
-}
+
 #interest_rate{
     cursor: pointer;
     border-color: black;
@@ -65,16 +61,6 @@
     cursor: pointer;
     margin-inline: 10px !important;
     background-color: hsla(61, 70%, 52%, 0.411);
-}
-#repayment input[type="radio"]:checked + label:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border: 7px solid white;
-    float: left;
-    margin-left: -1.7em;
-    margin-top: .3em;
-    border-radius: 100%;
 }
 input[type="radio"]:checked + label:after {
     content: "";
@@ -132,12 +118,30 @@ input[type="radio"]:checked + label:after {
 .focus_inputs:hover{
     background-color: hsl(61, 70%, 52%) !important;
 }
-.focus_content:focus,
-.focus_content:hover{
+.focus_content{
     border-color: hsl(61, 70%, 52%) !important;
     --bs-focus-ring-color: hsl(61, 70%, 52%, 0.324) !important;
 }
-
+/* invalid block */
+#mountgage_amount_invalid,
+#mountgage_term_invalid,
+#interest_rate_invalid{
+    color: red !important;
+}
+.number_invalid{
+    border-color: red !important;
+    background-color: red !important;
+    opacity: 100% !important;
+    color: white !important;
+    
+}
+.focus_invalid{
+    border-color: hsl(4, 69%, 50%) !important;
+    --bs-focus-ring-color: hsl(4, 69%, 50%, 0.324) !important;
+}
+.mountgage_invalid{
+    border-color: hsl(4, 69%, 50%) !important;
+}
 /* color: papayawhip; */
 /* dektop */
 @media (min-width: 768px) {
