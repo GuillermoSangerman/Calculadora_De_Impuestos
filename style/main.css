@@ -147,8 +147,8 @@ input[type="radio"]:checked + label:after {
 /* dektop */
 @media (min-width: 768px) {
     .container_desktop{
-        max-width: 800px;
-        max-height: 500px;
+        max-width: 900px;
+        max-height: 600px;
         border-radius: 1.5rem ;
     }
     .results_container{
