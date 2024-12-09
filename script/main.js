@@ -46,12 +46,6 @@ function interestOnlyChecked() {
     soloIntereses(p, r, n)
 }
 function agregarInput() {
-    console.log(repayment.checked, interestOnly.checked);
-    if (mountgageAmount.value === "" || mountgageAmount.value < 0 ||
-        mountgageTerm.value === "" || mountgageTerm.value < 0 ||
-        interestRate.value === "" || interestRate.value < 0 ||
-        repayment.checked === false || interestOnly.checked === false
-    ) {
         if (mountgageAmount.value === "" || mountgageAmount.value < 0) {
             mountgageAmountInvalid.classList.add('d-block')
             mountgageAmount.classList.add(`mountgage_invalid`)
@@ -105,47 +99,17 @@ function agregarInput() {
         }
         if (repayment.checked === false || interestOnly.checked === false) {
             repaymentInvalid.classList.add("d-block")
-        } else if (repayment.checked || interestOnly.checked) {
+        } 
+        if (repayment.checked === true && interestOnly.checked === false ||
+            repayment.checked === false && interestOnly.checked === true) {
             repaymentInvalid.classList.add("d-none")
-            repaymentInvalid.classList.remove("d-block")
         }
-    }
-    else {
-        if (repayment.checked) {
+        if (repayment.checked === true && interestOnly.checked === false) {
             repaymentChecked()
-
-
-
-
-
-        } else if (interestOnly.checked) {
+        } else if (repayment.checked === false && interestOnly.checked === true) {
             interestOnlyChecked()
-            // mountgageAmountInvalid.classList.add('d-none')
-            // mountgageAmount.classList.remove(`mountgage_invalid`)
-            // mountgageAmount.classList.remove(`focus_invalid`)
-            // mountgageAmount.classList.add('focus_content')
-            // mountgageAmount.classList.add('mountgage_amount')
-            // numberIcon.classList.remove('number_invalid')
-            // numberIcon.classList.add('number_icon')
-            // mountgageTermIvalid.classList.add('d-none')
-            // mountgageTerm.classList.remove(`mountgage_invalid`)
-            // mountgageTerm.classList.remove(`focus_invalid`)
-            // mountgageTerm.classList.add('focus_content')
-            // mountgageTerm.classList.add('mountgage_term')
-            // numberIconYears.classList.remove('number_invalid')
-            // numberIconYears.classList.add('number_icon_years')
-            // interestRateInvalid.classList.add('d-none')
-            // interestRate.classList.remove(`mountgage_invalid`)
-            // interestRate.classList.remove(`focus_invalid`)
-            // interestRate.classList.add('focus_content')
-            // interestRate.classList.add('mountgage_term')
-            // numberIconPorcentaje.classList.remove('number_invalid')
-            // numberIconPorcentaje.classList.add('number_icon_years')
-            // repaymentInvalid.classList.add("d-none")
         }
-    }
 }
-
 function obtenerIntereses(r) {
     let result = r / 100 / 12
     return result
@@ -180,11 +144,11 @@ function resetAll() {
     interestRate.value = ""
     resultsRepay.value = 0
     resultsRepayments.value = 0
+    resultsContainer.classList.remove('d-none')
+    resultsContainerCal.classList.add('d-none')
     //location.reload()
 }
 clearAll.addEventListener('click', () => {
-    resultsContainer.classList.remove('d-none')
-    resultsContainerCal.classList.add('d-none')
     resetAll()
 })
 
