@@ -23,7 +23,7 @@ let n = 0
 
 // calculo de las formulas y condiciones
 export function repaymentChecked() {
-    if (mountgageAmount.value === "" && mountgageAmount.value < 1 || mountgageTerm.value === "" && mountgageTerm.value < 1 || interestRate.value === "" && interestOnly.value > 1) {
+    if (mountgageAmount.value === "" && mountgageAmount.value < 1 || mountgageTerm.value === "" && mountgageTerm.value < 1 || interestRate.value === "" && interestRate.value < 1) {
         console.log("es Nan");
         resultsContainer.classList.remove('d-none')
         resultsContainerCal.classList.add('d-none')
