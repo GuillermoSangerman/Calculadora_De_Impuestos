@@ -118,7 +118,8 @@ input[type="radio"]:checked + label:after {
 .focus_inputs:hover{
     background-color: hsl(61, 70%, 52%) !important;
 }
-.focus_content{
+.focus_content:focus,
+.focus_content:hover{
     border-color: hsl(61, 70%, 52%) !important;
     --bs-focus-ring-color: hsl(61, 70%, 52%, 0.324) !important;
 }
