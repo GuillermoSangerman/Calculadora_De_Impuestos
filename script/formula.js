@@ -43,7 +43,7 @@ export function interestOnlyChecked() {
         console.log("es Nan");
         resultsContainer.classList.remove('d-none')
         resultsContainerCal.classList.add('d-none')
-    }  else {
+    } else {
         resultsContainer.classList.add('d-none')
         resultsContainerCal.classList.remove('d-none')
         p = parseFloat(mountgageAmount.value)
@@ -72,8 +72,8 @@ export function calculoDeIntereses(p, r, n) {
     let primerValor = p * r * ((1 + r) ** n)
     let segundoValor = ((1 + r) ** n) - 1
     let res = (primerValor / segundoValor)
-    resultsRepayments.value = res.toFixed(2)
-    resultsRepay.value = (res * n).toFixed(2)
+    resultsRepayments.value = ("£" + res.toFixed(2))
+    resultsRepay.value = ("£" + (res * n).toFixed(2))
 }
 export function soloIntereses(p, r, n) {
     let primerValor = p * r * ((1 + r) ** n)
@@ -81,6 +81,6 @@ export function soloIntereses(p, r, n) {
     let res = (primerValor / segundoValor)
     let multiplicoYResto = (res * n) - p
     let divido = multiplicoYResto / n
-    resultsRepayments.value = divido.toFixed(2)
-    resultsRepay.value = multiplicoYResto.toFixed(2)
+    resultsRepayments.value = ("£" + divido.toFixed(2))
+    resultsRepay.value = ("£" + multiplicoYResto.toFixed(2))
 }
